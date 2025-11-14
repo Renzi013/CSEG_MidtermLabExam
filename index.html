@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Last Bus Home</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <div id="game-container">
+        <!-- Start Screen -->
+        <div id="start-screen" class="screen active">
+            <div class="title-card">
+                <h1>The Last Bus Home</h1>
+                <p class="subtitle">Your choices define the journey</p>
+                <button id="start-btn" class="btn">Start Journey</button>
+                <button id="instructions-btn" class="btn secondary">How to Play</button>
+            </div>
+        </div>
+
+        <!-- Instructions Screen -->
+        <div id="instructions-screen" class="screen">
+            <div class="instructions-card">
+                <h2>How to Play</h2>
+                <div class="instructions-content">
+                    <p>You're riding the last bus home. The choices you make will shape your story and determine your ending.</p>
+                    <p>• Read each scenario carefully</p>
+                    <p>• Make choices that reflect your values</p>
+                    <p>• Your decisions will lead to different endings</p>
+                    <p>• There are multiple endings to discover</p>
+                </div>
+                <button id="back-btn" class="btn">Back to Menu</button>
+            </div>
+        </div>
+
+        <!-- Game Screen -->
+        <div id="game-screen" class="screen">
+            <div class="scene-background" id="scene-background">
+                <div class="bus-interior"></div>
+            </div>
+            
+            <div class="dialogue-container">
+                <div class="character-info" id="character-info"></div>
+                <div class="dialogue-text" id="dialogue-text"></div>
+            </div>
+            
+            <div class="choices-container" id="choices-container"></div>
+            
+            <div class="stats-container">
+                <div class="stat" id="kindness-stat">Kindness: 0</div>
+                <div class="stat" id="practicality-stat">Practicality: 0</div>
+            </div>
+        </div>
+
+        <!-- Ending Screen -->
+        <div id="ending-screen" class="screen">
+            <div class="ending-card">
+                <h2 id="ending-title">Ending Title</h2>
+                <div class="ending-image" id="ending-image"></div>
+                <p id="ending-description">Ending description will appear here.</p>
+                <div class="ending-stats">
+                    <h3>Your Journey</h3>
+                    <div id="ending-stats-list"></div>
+                </div>
+                <button id="restart-btn" class="btn">Take Another Journey</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/scene.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/game.js"></script>
+</body>
+</html>
